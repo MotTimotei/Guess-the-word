@@ -1,0 +1,34 @@
+.main{width:100%;height:100%;background: url(../svgs/jungle.svg) no-repeat;background-size: cover;}
+
+.game_word{}
+.logo{position:relative;top:50%;left:50%;transform:translate(-50%, -50%);width:30%;}
+.logo img{width:100%;;height:100%;background-size: cover;}
+
+
+
+
+.header{position:absolute;width:100%;height:100px;display: inline-flex;}
+.life{width:10%;height:20px;padding:4px;background: url(../svgs/wood_table.svg);border-radius: 5px;margin:20px;border: 0;outline: none;}
+.timer{width:100%;height: 100%;background-color: #0a740a;transition: .8s;border:0;}
+.settings{width:50px;height:50px;background: url(../svgs/settings.svg) no-repeat;background-size: cover;filter:brightness(1.2);transition:.3s;cursor:pointer;}
+.settings:hover{transform:rotate(20deg);}
+
+
+
+.game{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;}
+.letters, .game_word{width:100%;height:auto;padding:30px;text-align: center;}
+.letter{width:60px;height:60px;margin:10px;display:inline-block;border-radius:10px;}
+.letter_empty{width:70px;height:70px;padding:2px;background:url(../svgs/rock.svg) no-repeat;background-size: cover;background-color: #ccc;border-radius: 10px;box-shadow:inset -6px -6px 4px 2px rgba(0,0,0,0.6);}
+.letter_span{position:relative;width:60px;height:60px;border-radius: 10px;box-shadow: 0 10px 5px 0 rgba(0,0,0,0.5);background:url(../svgs/wood.svg) no-repeat;background-size: cover;color:#fff;transition: .3s;cursor: pointer}
+.letter_span span{line-height: 60px;vertical-align: middle;text-align: center;font-size: 50px;font-weight:900;}
+.letter_span:hover{box-shadow: none;transform:scale(.95);}
+.letter_{background-color:rgba(0,0,0,0.2);}
+.hold{border:solid #ccc 4px;}
+.hovered{background:#f4f4f4;border-style:dashed;}
+.invisible{display:none;}
+
+
+.cheet{position:absolute;top:0;left:0;width:100vw;height:100vh;background-color:rgba(0,0,0,0.8);}
+.cheet_div{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:50%;background: url(../svgs/wood_table.svg);border-radius: 20px;}
+.cheet_input{width:100%;font-size:1.5em;outline:none;border:0;background-color: transparent;color:#f3f3f3;padding:15px;}
+.cheet_index{width:20px;height:20px;position:absolute;bottom:-10px;right:-10px;font-size:14px;background-color: #009900;border-radius:10px;line-height: 20px;vertical-align: middle;text-align: center;}
