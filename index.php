@@ -9,14 +9,14 @@
   </head>
   <body>
     <div class="main">
-    <div class="header">
-      <div class="life">
-        <div class="timer"></div>
+      <div class="header">
+        <div class="life">
+          <div class="timer"></div>
+          <span id="timer"></span>
+        </div>
+        <div class="level"></div>
+        <div class="settings"></div>
       </div>
-      <div class="level"></div>
-      <div class="settings"></div>
-
-    </div>
       <div class="game">
         <div class="game_word">
         </div>

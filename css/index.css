@@ -5,11 +5,14 @@
 .logo img{width:100%;;height:100%;background-size: cover;}
 
 
+.set{position:absolute; top:0;left:0;width:100%;height:100%;background: rgba(0,0,0,0.4);}
+.menu{position:absolute;top:50%;left:50%;width:450px;height:550px;transform: translate(-50%, -50%);background-color: #000;color: #fff;}
 
 
 .header{position:absolute;width:100%;height:100px;display: inline-flex;}
-.life{width:10%;height:20px;padding:4px;background: url(../svgs/wood_table.svg);border-radius: 5px;margin:20px;border: 0;outline: none;}
+.life{width:10%;height:20px;padding:4px;background: url(../svgs/wood_table.svg);border-radius: 5px;margin:20px;border: 0;outline: none;position:relative;}
 .timer{width:100%;height: 100%;background-color: #0a740a;transition: .8s;border:0;}
+#timer{position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);color:#ccc;font-weight: bold;}
 .settings{width:50px;height:50px;background: url(../svgs/settings.svg) no-repeat;background-size: cover;filter:brightness(1.2);transition:.3s;cursor:pointer;}
 .settings:hover{transform:rotate(20deg);}
 

@@ -1,21 +1,23 @@
-
-
+/*Not sure if this should be global*/let lvl = 1;
 
 //timer
 
 
-function timer(time, i){
+function timer(time, i, a, b){
+  let numberToTime = () =>{
+    return` ${parseInt(time/60)}:${time%60}`
+  }
+  a.style= `width:${(time/(time+i)*100)}%;`
+  b.innerHTML = numberToTime()
   if(time == 0) setTimeout(function(){
-    alert('Game over!')/*Game over, call the function for this*/},800/*set 800 as transition time for the div */)
+    gameover()/*Game over, call the function for this*/},800/*set 800 as transition time for the div */)
   else{
     setTimeout(
       timeRun = () =>{
         while(time != 0){
           time--
           i++
-          let a = document.querySelector('.timer')
-          a.style= `width:${(time/(time+i)*100)}%;`
-          return timer(time, i)
+          return timer(time, i, a, b)
         }
         return 0
       }, 1000)
@@ -24,12 +26,58 @@ function timer(time, i){
 
 
 
-timer(180, 0)
+timer(200, 0, document.querySelector('.timer'), document.querySelector('#timer'))
 
 
 //timer-end
 
-let cuvinte = loadXMLDoc()
+
+//Game over
+
+function gameover(){
+  let a = document.createElement('div')
+  a.className = 'set'
+  a.innerHTML = '<div class="menu">Game over!<button>Try again!</button></div>'
+  document.getElementsByTagName('body')[0].appendChild(a)
+}
+
+//Game over-end
+
+//Game finish
+
+function gameFinish(){
+  alert('Ai terminat jocul, felicitari!')
+}
+
+//Game finish-end
+
+
+
+
+//get words
+//let cuvinte = loadXMLDoc()
+let cuvinte1 = ['jungla', 'maimuta', 'liana', 'mlastina', 'frunza']
+let cuvinte2 = ['egipt', 'faraon', 'imparateasa', 'nil', 'sarcofag']
+//get words-end
+
+
+
+
+
+
+//Level Up
+
+
+function levelUp(){
+  return  eval("cuvinte"+lvl)
+}
+
+
+//Level Up-end
+
+
+
+
 
 
 
@@ -37,6 +85,7 @@ let cuvinte = loadXMLDoc()
 
 
 let get_word = function(){
+  let cuvinte = levelUp()
   if (cuvinte.length >=1 ) {
     let a = cuvinte[Math.floor(Math.random() * cuvinte.length)];
     if (cuvinte.indexOf(a) > -1) {
@@ -124,7 +173,8 @@ function over_and_over_again(){
       empty.addEventListener('drop', dragDrop);
     }
   } else {
-    window.alert('nasol asa\nAi terminat jocul, nu mai ai ce face acuma :/\nMai bine asa?');
+    //va trebui sa mai adaugi cod
+    gameFinish()
   }
 
 }
