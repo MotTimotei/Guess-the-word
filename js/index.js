@@ -9,14 +9,13 @@ function timer(time, i, a, b){
   }
   a.style= `width:${(time/(time+i)*100)}%;`
   b.innerHTML = numberToTime()
-  if(time == 0) setTimeout(function(){
-    gameover()/*Game over, call the function for this*/},800/*set 800 as transition time for the div */)
+  if(time == 0) setTimeout(function(){ gameover()/*Game over, call the function for this*/},800/*set 800 as transition time for the div */)
   else{
     setTimeout(
       timeRun = () =>{
         while(time != 0){
           time--
-          i++
+          i-=-1//:)
           return timer(time, i, a, b)
         }
         return 0
